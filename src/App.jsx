@@ -9,7 +9,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           {/* Inserir pagina abaixo e importar */}
-          {/* <Route path="/detalhefilme/:id" element={<DetalheFilme/>} /> */}
+          {/* <Route path="/detalhes/:id" element={<DetalheFilme/>} /> */}
           {/* <Route path="/pesquisa/:id" element={<Pesquisa/>} /> */}
         </Routes>
       </BrowserRouter>
