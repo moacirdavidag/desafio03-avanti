@@ -1,9 +1,10 @@
+/* Estilo padrão para telas maiores (desktop) */
 header {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-bottom: 36px;
     align-items: center;
-    width: 980px;    
+    width: 980px;
 }
 
 .image_logo {
@@ -32,3 +33,35 @@ header {
     border-radius: 6px;
     border: none;
 }
+
+/* Estilo para telas menores (por exemplo, tablets e smartphones) */
+@media screen and  (max-width: 768px) {
+      header {
+        display: block;
+        width: 980px;
+       
+    }
+
+    .image_logo {
+        margin-left: -250px;
+    }
+
+
+    .search-box{
+        padding: 8px 8px;
+    }  
+    .search-text {
+        margin-left: 280px;
+      
+    }   
+}
+    
+
+
+
+
+
+
+
+   
+
