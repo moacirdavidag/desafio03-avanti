@@ -1,32 +1,32 @@
 import "./style.css";
 import { FaStar, FaClock, FaCalendar } from 'react-icons/fa';
 
-export const Movie = ({ title, poster, vote, year }) => {
+export const Movie = ({ title, poster, vote, year, detailsMovieEvent }) => {
+
     return (
         <>
-            <div class="movie">
-                <div class="title">
-                    <span>Barbie</span>
+            <div className="movie">
+                <div className="title">
+                    <span>{title}</span>
                     <div>
-                        <p><FaStar /> 4.9</p>
+                        <p><FaStar /> {vote}</p>
                     </div>
                 </div>
-                <div class="poster">
-                    <img src="./assets/Poster.png" />
+                <div className="poster">
+                    <img src={poster} />
 
-                    <div class="info">
-                        <div class="duration">
+                    <div className="info">
+                        <div className="duration">
                             <span><FaClock /> 1:54:00</span>
                         </div>
                     </div>
 
                 </div>
-                <div class="year">
-                    <span><FaCalendar /> 2023</span>
+                <div className="year">
+                    <span><FaCalendar /> {year}</span>
                 </div>
-                <button>
-                    <img src="./assets/icons/Play.png" alt="" />
-                    <span>Assistir Trailer</span>
+                <button onClick={detailsMovieEvent}>
+                    Detalhes
                 </button>
             </div>
         </>

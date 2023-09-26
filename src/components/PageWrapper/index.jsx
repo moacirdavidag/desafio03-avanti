@@ -6,8 +6,8 @@ export const PageWrapper = () => {
         <>
             <section className="PageWrapper">
                 <div className="container">
-                    <Header></Header>
-                    <MovieWrapper></MovieWrapper>
+                    <Header />
+                    <MovieWrapper />
                 </div>
             </section>
         </>

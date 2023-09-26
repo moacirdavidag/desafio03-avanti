@@ -4,9 +4,7 @@ import { PageWrapper } from '../../components/PageWrapper'
 export const Home = () => {
   return (
     <>
-      <PageWrapper>
-
-      </PageWrapper>
+      <PageWrapper />
     </>
   )
 }
