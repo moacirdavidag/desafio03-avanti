@@ -13,14 +13,17 @@ header {
 .search-container {
     overflow: hidden;
     float: right;
-    height: 4em;
-    width: 4em;
-    margin-right: 40px;
+    height: auto;
+    width: auto;
+    margin-right: 120px;
     border-radius: 2em;
     box-shadow: 0 0 4px #9947ff;
     -moz-transition: all 0.35s;
     transition: all 0.35s;
     -webkit-transition: all 0.35s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .search-container:hover,
@@ -72,12 +75,12 @@ header {
     align-items: center;
     justify-content: center;
     float: right;
-    width: 1.75em;
-    height: 1.75em;
+    width: 1.5em;
+    height: 1.5em;
     margin: 0.125em;
     background: #9947ff;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #fdf6e3;
     border-radius: 50%;
     box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.25),
@@ -90,6 +93,11 @@ header {
     border: 0 !important;
     text-shadow: 0 0 0;
   }
+
+  .button:hover {
+    color: #FFF;
+  }
+
   .button i {
     font-size: 85%;
   }

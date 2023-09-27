@@ -53,8 +53,8 @@ export const MovieWrapper = () => {
     }, []);
 
     const groupedMovies = [];
-    for (let i = 0; i < movies.length; i += 3) {
-        groupedMovies.push(movies.slice(i, i + 3));
+    for (let i = 0; i < movies.length; i += 5) {
+        groupedMovies.push(movies.slice(i, i + 5));
     }
 
     return (
