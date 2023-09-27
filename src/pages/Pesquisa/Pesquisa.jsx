@@ -37,33 +37,31 @@ export const Pesquisa = () => {
 
 
         <>
-            <div className="pesquisa-container">
-                <Header />
+            <div className="overflow-auto">
+                <div className="pesquisa-container">
+                    <Header />
 
-                <div>
-                    <h4 className="mb-5">Resultados</h4>
-                    {
-                        movie.results?.map((mv) => (
-                            <span key={mv.id} className="d-flex">
-                                <h5 className="" >{`${mv.title}`} </h5>
+                    <div>
 
-                                {/* {mv.poster_path != undefined &&
-                                    <img className="pesquisa-img" src={`https://image.tmdb.org/t/p/original/${mv.poster_path}`}></img>
-                                } */}
-
-                                <Movie key={mv.id}
+                        <div className="d-flex ">
+                            {
+                                movie.results?.map((mv) => (
+                                    <span key={mv.id} className="">
+                                        <Movie key={mv.id}
                                             title={mv.title}
                                             poster={`https://image.tmdb.org/t/p/original/${mv.poster_path}`}
                                             year={mv.release_date}
                                             vote={mv.vote_average}
                                             id={mv.id}
-                                            handleDetails={handleMovieDetailsPage}/>
+                                            handleDetails={handleMovieDetailsPage} />
 
-                            </span>
-                        ))
-                    }
+                                    </span>
+                                ))
+                            }
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
         </>
     )
