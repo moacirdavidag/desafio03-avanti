@@ -1,5 +1,5 @@
 import "./style.css";
-import { FaStar, FaClock, FaCalendar } from 'react-icons/fa';
+import { FaStar, FaCalendar } from 'react-icons/fa';
 import moment from "moment/moment";
 
 export const Movie = ({ title, id, poster, vote, year, handleDetails }) => {

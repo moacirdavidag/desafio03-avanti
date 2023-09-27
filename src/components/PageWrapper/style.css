@@ -9,7 +9,7 @@
     padding: 44px 260px;
 }
 
-.container {
+.wrapper {
     display: flex;
     flex-direction: column;
     max-width: 854px; 

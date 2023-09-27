@@ -5,7 +5,7 @@ export const PageWrapper = () => {
     return (
         <>
             <section className="PageWrapper">
-                <div className="container">
+                <div className="wrapper">
                     <Header />
                     <MovieWrapper />
                 </div>
