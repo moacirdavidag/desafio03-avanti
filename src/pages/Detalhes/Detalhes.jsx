@@ -8,7 +8,7 @@ import "./style.css"
 import { useParams } from "react-router-dom";
 export const Detalhes = () => {
 
-    
+
 
     const id = useParams().id;
     const [movie, setMovie] = useState([]);
@@ -37,8 +37,35 @@ export const Detalhes = () => {
                 <h5>{movie.release_date}</h5>
                 <img className="detalhes-icon" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt="" />
                 <link rel="icon" href="./assets/icone_logo_aba.png" />
-                <h5 className="text-warning" >{movie.vote_average}</h5>
-                <p>{movie.overview}</p>
+                <h5 className="text-warning " >{movie.vote_average}
+                    <FaStar />
+
+                </h5>
+                <div>
+                    <h4>Genero(s)</h4>
+                    {
+                        movie.genres?.map((genre) => (
+                            <span key={genre.id}>{`${genre.name}`} <br /> </span>
+                        ))
+                    }
+                </div>
+
+                <p className="mt-4">{movie.overview}</p>
+
+                <div>
+                    <h4>Companias de produção(s)</h4>
+                    {
+                        movie.production_companies?.map((companies) => (
+                            <span key={companies.id}>
+                                {companies.logo_path != undefined &&
+                                    <img className="detalhes-companies" src={`https://image.tmdb.org/t/p/original/${companies.logo_path}`}></img>
+                                }
+
+                            </span>
+                        ))
+                    }
+                </div>
+
             </div>
         </>
     )
