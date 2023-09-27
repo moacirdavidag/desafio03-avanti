@@ -14,9 +14,9 @@ export const Header = () => {
                     <Link to={'/favorites'}><FaHeart /> Meus favoritos</Link>
                 </div>
                 <div className='search-container' tabIndex='1'>
-                      <input placeholder='Pesquisa' type='text'/>
+                      <input className="input-search" placeholder='Pesquisa' type='text'/>   
                       <a className='button'>
-                        <FaSearch />
+                        <FaSearch/>
                       </a>
                 </div>
 
