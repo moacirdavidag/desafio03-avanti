@@ -7,11 +7,23 @@
     background: var(--cores-cinza-dark, #1E1F28);
     box-shadow: 0px -3px 22px 0px rgba(0, 0, 0, 0.35);
     padding: 44px 260px;
-    color: #FFF;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     max-width: 854px; 
+}
+
+.movies {
+    display: flex;
+    gap: 36px; 
+    align-items: center;
+    justify-content: center; 
+    max-width: 920px;
+    color: white;
+}
+
+.movies p {
+    color: #FFFFFF;
 }
