@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home";
-import { Details } from "./pages/Details";
+import { Detail } from "./pages/Details/Details";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           {/* Inserir pagina abaixo e importar */}
-          <Route path="/detalhes/:id" element={<Details />} />
+          <Route path="/details/:id" element={<Detail/>} />
           {/* <Route path="/pesquisa/:id" element={<Pesquisa/>} /> */}
         </Routes>
       </BrowserRouter>

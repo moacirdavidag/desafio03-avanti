@@ -13,7 +13,7 @@ export const MovieWrapper = () => {
     });
 
     const handleMovieDetailsPage = (e) => {
-        useNavigate(`/detalhes/${e.target.id}`);
+        useNavigate(`/details/${e.target.id}`);
     }
 
     useEffect(() => {
