@@ -4,6 +4,7 @@ import "./style.css"
 
 import { api } from '../../services/api';
 import { useNavigate } from "react-router-dom";
+import { Carousel } from "react-bootstrap";
 
 export const MovieWrapper = () => {
     const [movies, setMovies] = useState([]);
@@ -12,9 +13,12 @@ export const MovieWrapper = () => {
         text: "Falha na autenticação da API"
     });
 
-    const handleMovieDetailsPage = (e) => {
-        useNavigate(`/details/${e.target.id}`);
+    const navigate = useNavigate();
+
+    const handleMovieDetailsPage = (id) => {
+        navigate(`/detalhes/${id}`);
     }
+
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -48,6 +52,11 @@ export const MovieWrapper = () => {
         fetchMovies();
     }, []);
 
+    const groupedMovies = [];
+    for (let i = 0; i < movies.length; i += 3) {
+        groupedMovies.push(movies.slice(i, i + 3));
+    }
+
     return (
         <>
             <section className="movies">
@@ -57,17 +66,28 @@ export const MovieWrapper = () => {
                         <p>{error.text}</p>
                     </>
                 ) : (
-                    movies.map(movie => (
-                        <Movie
-                            key={movie.id}
-                            title={movie.title}
-                            poster={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                            year={movie.release_date}
-                            vote={movie.vote_average}
-                            handleMovieDetailsPage={handleMovieDetailsPage}
-                        />
-                    ))
+                    <Carousel indicators={false}>
+                        {groupedMovies.map((group, index) => (
+                            <Carousel.Item key={index}>
+                                <div className="d-flex justify-content-between">
+                                    {group.map(movie => (
+                                        <Movie
+                                            key={movie.id}
+                                            title={movie.title}
+                                            poster={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                                            year={movie.release_date}
+                                            vote={movie.vote_average}
+                                            id={movie.id}
+                                            handleDetails={handleMovieDetailsPage}
+                                        />
+                                    ))}
+                                </div>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+
                 )}
+
             </section>
         </>
     )

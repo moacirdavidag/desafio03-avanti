@@ -1,7 +1,8 @@
 import "./style.css";
-import { FaStar, FaClock, FaCalendar } from 'react-icons/fa';
+import { FaStar, FaCalendar } from 'react-icons/fa';
+import moment from "moment/moment";
 
-export const Movie = ({ title, poster, vote, year, detailsMovieEvent }) => {
+export const Movie = ({ title, id, poster, vote, year, handleDetails }) => {
 
     return (
         <>
@@ -13,19 +14,13 @@ export const Movie = ({ title, poster, vote, year, detailsMovieEvent }) => {
                     </div>
                 </div>
                 <div className="poster">
-                    <img src={poster} />
-
-                    <div className="info">
-                        <div className="duration">
-                            <span><FaClock /> 1:54:00</span>
-                        </div>
-                    </div>
+                    <img src={poster} alt={title} />
 
                 </div>
                 <div className="year">
-                    <span><FaCalendar /> {year}</span>
+                    <span><FaCalendar /> {moment(year).format('DD/MM/YYYY')}</span>
                 </div>
-                <button onClick={detailsMovieEvent}>
+                <button onClick={() => handleDetails(id)}>
                     Detalhes
                 </button>
             </div>
