@@ -22,11 +22,17 @@ header {
     transition: all 0.35s;
     -webkit-transition: all 0.35s;
   }
+
+.input-search{
+  height: 63px;
+  font-size: 20px;
+  
+}
   
   .search-container:hover,
   .search-container:focus,
   .search-container:focus-within {
-    width: 25em;
+    width: 28em;
     border-radius: 5px 2em 2em 5px;
     outline: none;
   }

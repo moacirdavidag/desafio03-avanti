@@ -54,7 +54,7 @@ export const Detalhes = () => {
                 <p className="mt-4">{movie.overview}</p>
 
                 <div>
-                    <h4>Companias de produção(s)</h4>
+                    <h4>Companhias de produção</h4>
                     {
                         movie.production_companies?.map((companies) => (
                             <span key={companies.id}>
