@@ -83,3 +83,9 @@
     font-weight: 400;
     line-height: 20px;
 }
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

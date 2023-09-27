@@ -101,3 +101,13 @@ header {
   .button i {
     font-size: 85%;
   }
+
+  .favorites {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+  }
+
+  .favorites a, a:hover, a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
