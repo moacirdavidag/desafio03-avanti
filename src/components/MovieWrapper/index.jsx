@@ -12,9 +12,12 @@ export const MovieWrapper = () => {
         text: "Falha na autenticação da API"
     });
 
-    const handleMovieDetailsPage = (e) => {
-        useNavigate(`/detalhes/${e.target.id}`);
+    const navigate = useNavigate();
+
+    const handleMovieDetailsPage = (id) => {
+        navigate(`/detalhes/${id}`);
     }
+
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -64,7 +67,8 @@ export const MovieWrapper = () => {
                             poster={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                             year={movie.release_date}
                             vote={movie.vote_average}
-                            handleMovieDetailsPage={handleMovieDetailsPage}
+                            id={movie.id}
+                            handleDetails={handleMovieDetailsPage}
                         />
                     ))
                 )}

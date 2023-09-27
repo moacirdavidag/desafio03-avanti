@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import logo from "../../assets/img/logo.png"
-import "./style.css"
+import "./style.css";
+import { FaSearch } from "react-icons/fa";
+
 export const Header = () => {
     return (
         <>
@@ -9,10 +11,10 @@ export const Header = () => {
                     <img src={logo} width="190" height="60" alt="Logo Avanti Flix" className="image_logo"/>
                 </Link>
 
-                <div className='search-container' tabindex='1'>
+                <div className='search-container' tabIndex='1'>
                       <input placeholder='Pesquisa' type='text'/>
                       <a className='button'>
-                        <i className='fa fa-search'></i>
+                        <FaSearch />
                       </a>
                 </div>
 

@@ -1,7 +1,7 @@
 import "./style.css";
 import { FaStar, FaClock, FaCalendar } from 'react-icons/fa';
 
-export const Movie = ({ title, poster, vote, year, detailsMovieEvent }) => {
+export const Movie = ({ title, id, poster, vote, year, handleDetails }) => {
 
     return (
         <>
@@ -13,7 +13,7 @@ export const Movie = ({ title, poster, vote, year, detailsMovieEvent }) => {
                     </div>
                 </div>
                 <div className="poster">
-                    <img src={poster} />
+                    <img src={poster} alt={title} />
 
                     <div className="info">
                         <div className="duration">
@@ -25,7 +25,7 @@ export const Movie = ({ title, poster, vote, year, detailsMovieEvent }) => {
                 <div className="year">
                     <span><FaCalendar /> {year}</span>
                 </div>
-                <button onClick={detailsMovieEvent}>
+                <button onClick={() => handleDetails(id)}>
                     Detalhes
                 </button>
             </div>
