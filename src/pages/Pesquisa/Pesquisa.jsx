@@ -37,32 +37,36 @@ export const Pesquisa = () => {
 
 
         <>
+
             <div className="overflow-auto">
                 <div className="pesquisa-container">
+
                     <Header />
 
-                    <div>
+                    <div className="d-flex ">
+                        {
+                            movie.results?.map((mv) => (
+                                <span key={mv.id} className="">
+                                    <Movie key={mv.id}
+                                        title={mv.title}
+                                        poster={`https://image.tmdb.org/t/p/original/${mv.poster_path}`}
+                                        year={mv.release_date}
+                                        vote={mv.vote_average}
+                                        id={mv.id}
+                                        handleDetails={handleMovieDetailsPage} />
 
-                        <div className="d-flex ">
-                            {
-                                movie.results?.map((mv) => (
-                                    <span key={mv.id} className="">
-                                        <Movie key={mv.id}
-                                            title={mv.title}
-                                            poster={`https://image.tmdb.org/t/p/original/${mv.poster_path}`}
-                                            year={mv.release_date}
-                                            vote={mv.vote_average}
-                                            id={mv.id}
-                                            handleDetails={handleMovieDetailsPage} />
-
-                                    </span>
-                                ))
-                            }
-                        </div>
+                                </span>
+                            ))
+                        }
                     </div>
-
                 </div>
+
             </div>
+            {movie.total_results <= 0 &&
+                <div class="alert alert-danger" role="alert">
+                    Nenhum filme encontrado!
+                </div>
+            }
         </>
     )
 }
