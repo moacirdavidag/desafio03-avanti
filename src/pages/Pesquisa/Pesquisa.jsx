@@ -63,7 +63,7 @@ export const Pesquisa = () => {
 
             </div>
             {movie.total_results <= 0 &&
-                <div class="alert alert-danger" role="alert">
+                <div className="alert alert-danger" role="alert">
                     Nenhum filme encontrado!
                 </div>
             }
