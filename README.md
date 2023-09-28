@@ -33,7 +33,13 @@ Este foi o último projeto do **Bootcamp Desenvolvimento Full Stack** do **Insti
 
 - React;
 - Vite;
-- Axios.
+- Axios;
+- Bootstrap.
+
+### 💻 Features
+- Salvar filmes favoritos (utilizando o localStorage e o useContext | ContextAPI do React);
+- Pesquisar filmes (utilizando o useState do React para gerenciar a pesquisa e o useNavigate da biblioteca react-router-dom);
+- Carrossel de filmes (biblioteca Bootstrap).
 
 ## 🫂Equipe
 
