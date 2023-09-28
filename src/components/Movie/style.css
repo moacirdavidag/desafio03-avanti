@@ -21,7 +21,23 @@
     display:flex;
     justify-content: space-between;
 }
+/* Responsividade movie */
 
+@media (max-width: 480px) {
+    .movie {
+      margin:  10px; 
+    }
+    .info,
+    .title {
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+   
+    .poster>img{
+        width: 194px;
+        height: 289px;
+    }
+  }
 .title>div {
     color: var(--cores-amarelo, #FEEA35);
     font-family: Outfit;
@@ -49,6 +65,7 @@
 .poster>img{
     width: 194px;
     height: 289px;
+    border-radius: 4px;
 }
 
 
@@ -89,23 +106,3 @@
     align-items: center;
     justify-content: space-between;
 }
-
-
-
-/* Responsividade */
-
-@media (max-width: 480px) {
-    .movie {
-      margin:  10px; 
-    }
-    .info,
-    .title {
-      flex-direction: column; 
-      align-items: flex-start; 
-    }
-   
-    .poster>img{
-        width: 194px;
-        height: 289px;
-    }
-  }
