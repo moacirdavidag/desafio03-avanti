@@ -1,8 +1,43 @@
-# React + Vite
+# AvantiFlix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este foi o último projeto do **Bootcamp Desenvolvimento Full Stack** do **Instituto Atlântico**. O projeto consumiu a API do TheMovieDB e exibe cards de filmes, permite adicionar filmes favoritos e pesquisar por filmes.
 
-Currently, two official plugins are available:
+[IMAGEM DO PROJETO EM BREVE]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Iniciando o projeto
+
+1 - Clone este projeto:
+
+```
+  git clone https://github.com/moacirdavidag/desafio03-avanti.git
+```
+
+2 - Entre no diretório do projeto clonado e instale as dependências do projeto.
+
+```
+   npm install
+```
+3 - Crie um arquivo .env na raiz do projeto, com a seguinte variável contendo o seu **TOKEN** da API TheMovieDB:
+
+```
+  VITE_ENV_API_TOKEN_AUTH= TOKEN
+  API_KEY= API KEY 
+```
+
+4 - Rode o projeto:
+
+```
+  npm run dev
+```
+## ⚙️ Tecnologias utilizadas
+
+- React;
+- Vite;
+- Axios.
+
+## 🫂Equipe
+
+- Deybson Carvalho;
+- João Almir;
+- Matheus do Carmo;
+- Moacir David.
